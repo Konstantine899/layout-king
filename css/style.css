@@ -1,0 +1,145 @@
+body {
+  font-family: Tahoma;
+}
+
+.conteiner {
+  width: 1140px;
+  margin-left: auto; /*Размещаем контейнер по середине браузера*/
+  margin-right: auto; /*Размещаем контейнер по середине браузера*/
+}
+
+.header {
+  margin-top: 77px; /*Помимо верхнего отступа есть еще и нижний*/
+  padding-bottom: 96px;
+}
+.header-img {
+  display: inline-block;
+  width: 45%; /*Вот такая гребаная особенность не 40% Либо между div отступы задвай. либо позиционируй с отрицмтельными величинами. В нашем случае задеме чуть меньший размер*/
+  /*Встала еще одна проблема. Весь текст приклеился книзу. Исправляем это вертикальным выравниванием у текста и у каритнки*/
+  vertical-align: middle;
+}
+
+.header-text {
+  display: inline-block;
+  width: 54%;
+  vertical-align: middle; /*Читай больше про выравнивание строчно-блочных элементов*/
+}
+
+.header-text__descr {
+  display: inline-block;
+}
+
+.header-text__title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+header-text__subtitle {
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 35px;
+}
+header-text__descr {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  max-width: 530px; /*Задаем максимальную ширину что бы текст рассполагался не на 3 , а на 4-ре строчки*/
+  margin-bottom: 47px;
+}
+header-text__price {
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 53px;
+}
+
+button {
+  border-radius: 5px;
+  background-color: #f05a22;
+  font-style: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 22px 43px;
+}
+.button-o {
+  color: #f05a22;
+  background-color: transparent; /*Фоновый цвет прозрачный за него отвечает это свойство Запоминай!!!!*/
+  border: 2px solid #f05a22;
+}
+button:focus {
+  /*Задаю  псевдокласс для того что бы убрать синюю обводку*/
+  outline: none;
+}
+
+/* Конец блока header */
+
+/*Начало блока доставка*/
+
+.section-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 27px;
+  text-align: center;
+  margin-bottom: 97px;
+}
+
+.features {
+  background-color: #f2f2f2;
+  padding-top: 90px;
+  padding-bottom: 99px;
+}
+
+.features-wrap::after {
+  /*Для родительского контейнера картинок. Как только мы применяем для картинок float.
+ При этом блоки как бы выходят из патока. Эти блоки будут все время разьезжаться. так вот с помощью этого
+  псевдоклассы мы запрещаем обтекание. Для этого используется clearfix.*/
+  content: ""; /*Контент оставляем пустым*/
+  display: table; /*Делаем таблицей*/
+  clear: both; /*Очистить все*/
+}
+
+.features-blok {
+  /* display: inline-block; */
+  text-align: center;
+  width: 25%; /*25*4=100%*/
+  float: left;
+}
+
+.features-block__img{
+    min-height: 55px; /*Таким образом выравниваем текст*/
+    margin-bottom: 23px;
+}
+
+.features-block__text{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+/* Конец блока доставка */
+
+.buyers{
+  background-color: #ffffff;  
+  padding-top: 80px;
+  padding-bottom: 107px;
+}
+.buyers-title{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 27px;
+    text-align: center;
+    margin-bottom: 90px;  
+}
+
+.buyers-wrap::after{
+    /* content: ""; Контент оставляем пустым */
+    display: table; /*Делаем таблицей*/
+    clear: both; /*Очистить все*/
+}
+.buyers-peoples__img{
+    width: 24%; /*25*4=100%*/
+    float: left;
+    margin-left: 0;
+    margin-top: 36px;
+    margin-bottom: 114px;
+}
